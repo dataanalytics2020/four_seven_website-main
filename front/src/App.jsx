@@ -13,7 +13,7 @@ function App() {
 	return (
 		<div>
 			<div>ここに処理を書いていきます</div>
-			{data ? <div>{data.Hello}</div> : <button onClick={GetData}>データを取得</button>}
+			{data ? <div>{data.Hello}</div> : <button onClick={GetData}>ここをおしてみてね。</button>}
 		</div>
 	);
 }

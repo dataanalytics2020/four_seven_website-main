@@ -19,4 +19,4 @@ app.add_middleware(
 
 @app.get("/")
 def Hello():
-    return {"Hello":"World!"}
+    return {"Hello":"別の場所からデータを取得しました。朝6時までかかったけどできた。新技術や！"}
