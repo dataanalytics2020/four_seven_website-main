@@ -5,7 +5,9 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",
+    "https://four-seven-website-main.vercel.app",
 ]
+
 
 app.add_middleware(
     CORSMiddleware,
