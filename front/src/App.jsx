@@ -38,21 +38,21 @@ function App() {
                 <div className="card bg-indigo-700 card-side my-5 border-sky-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_3px_#08f]">
                   <figure><img class="object-contain h-18 w-40 p-3" src={sss_image} alt="SSS"/></figure>
                   <div className="card-body justify-center">
-                    <h2 className="card-title justify-center">4月26日(金)</h2>
+                    <h2 class="bg-pink-600 w-120 h-120 mx-auto font-bold text-xl p-2"> 4月26日(金) </h2>
                     <p class="text-2xl text-center">ピーアーク朝霞店</p>
                   </div>
                 </div>
                 <div className="card bg-indigo-700 card-side my-5 border-sky-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_3px_#08f]">
                   <figure><img class="object-contain h-18 w-40 p-3" src={sss_image} alt="SSS"/></figure>
                   <div className="card-body justify-center">
-                    <h2 className="card-title justify-center">4月27日(土)</h2>
+                    <h2 class="bg-pink-600 w-120 h-120 mx-auto font-bold text-xl p-2"> 4月27日(土) </h2>
                     <p class="text-2xl text-center">ピーアーク朝霞店</p>
                   </div>
                 </div>
                 <div className="card bg-indigo-700 card-side my-5 border-sky-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_3px_#08f]">
                   <figure><img class="object-contain h-18 w-40 p-3" src={sss_image} alt="SSS"/></figure>
                   <div className="card-body justify-center">
-                    <h2 className="card-title justify-center">4月28日(日)</h2>
+                  <h2 class="bg-pink-600 w-120 h-120 mx-auto font-bold text-xl p-2"> 4月28日(日) </h2>
                     <p class="text-2xl text-center">ピーアーク朝霞店</p>
                   </div>
                 </div>
@@ -64,6 +64,11 @@ function App() {
           </div>
         </div>
       </div>
+      <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
+        <aside>
+          <p>Copyright © 2024 - All right reserved by fourseven</p>
+        </aside>
+      </footer>
     </html>
     
 	);
