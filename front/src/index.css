@@ -23,3 +23,7 @@ code {
   padding: var(--padding-card, 1rem) !important;
   gap: 0.5rem;
 }
+
+.card {
+  border-radius: 0px !important;
+}

@@ -36,7 +36,7 @@ function App() {
     </div>
       <div style={{background:`url(${bgImage}) 0 0 no-repeat`}} >
         <div className="container mx-auto p-2">
-          <div class="max-w-3xl mx-auto">
+          <div class="max-w-2xl mx-auto">
             <img class="my-5 w-full" src={fourseven_500_250} />
             <div role="tablist" className="tabs tabs-lg tabs-lifted my-3">
               <input type="radio" name="my_tabs_2" role="tab" className="tab  whitespace-nowrap" aria-label="取材予定" checked/>
@@ -44,31 +44,22 @@ function App() {
                 <div className="card card-side bg-base-100 shadow-xl border-2 border-rose-600 my-2 ">
                   <figure><img class="object-contain h-18 w-40 p-3" src={sss_image} alt="SSS"/></figure>
                   <div className="card-body justify-center">
-                    <h2 className="card-title">4月27日</h2>
-                    <p>パーラー山下店</p>
-                    <div className="card-actions ">
-                      <button className="btn btn-primary">店舗詳細へ</button>
-                    </div>
+                    <h2 className="card-title">4月26日(金)</h2>
+                    <p class="text-2xl">ピーアーク朝霞店</p>
                   </div>
                 </div>
                 <div className="card card-side  my-5 border-sky-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_30px_#08f]">
                   <figure><img class="object-contain h-18 w-40 p-3" src={sss_image} alt="SSS"/></figure>
                   <div className="card-body justify-center">
-                    <h2 className="card-title">5月7日</h2>
-                    <p>パーラー豪徳寺店</p>
-                    <div className="card-actions ">
-                      <button className="btn btn-primary">店舗詳細へ</button>
-                    </div>
+                    <h2 className="card-title">4月27日(土)</h2>
+                    <p class="text-2xl">ピーアーク朝霞店</p>
                   </div>
                 </div>
                 <div className="card card-side bg-base-100 shadow-xl border-2 border-rose-600 my-2 ">
                   <figure><img class="object-contain h-18 w-40 p-3" src={sss_image} alt="SSS"/></figure>
                   <div className="card-body justify-center">
-                    <h2 className="card-title">5月17日</h2>
-                    <p>パーラー武田店</p>
-                    <div className="card-actions ">
-                      <button className="btn btn-primary">店舗詳細へ</button>
-                    </div>
+                    <h2 className="card-title">4月28日(日)</h2>
+                    <p class="text-2xl">ピーアーク朝霞店</p>
                   </div>
                 </div>
               </div>
