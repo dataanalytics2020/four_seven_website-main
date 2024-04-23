@@ -37,10 +37,10 @@ function App() {
       <div style={{background:`url(${bgImage}) 0 0 no-repeat`}} >
         <div className="container mx-auto p-2">
           <div class="max-w-3xl mx-auto">
-            <img class="my-5" src={fourseven_500_250} />
+            <img class="my-5 w-full" src={fourseven_500_250} />
             <div role="tablist" className="tabs tabs-lg tabs-lifted my-3">
               <input type="radio" name="my_tabs_2" role="tab" className="tab  whitespace-nowrap" aria-label="取材予定" checked/>
-              <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
+              <div role="tabpanel" className="tab-content bg-base-100  rounded-box p-6 ">
                 <div className="card card-side bg-base-100 shadow-xl border-2 border-rose-600 my-2 ">
                   <figure><img class="object-contain h-18 w-40 p-3" src={sss_image} alt="SSS"/></figure>
                   <div className="card-body justify-center">
@@ -51,7 +51,7 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div className="card card-side bg-base-100 shadow-xl border-2 border-rose-600 my-2 ">
+                <div className="card card-side  my-5 border-sky-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_30px_#08f]">
                   <figure><img class="object-contain h-18 w-40 p-3" src={sss_image} alt="SSS"/></figure>
                   <div className="card-body justify-center">
                     <h2 className="card-title">5月7日</h2>
