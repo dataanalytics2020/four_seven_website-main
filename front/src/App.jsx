@@ -59,9 +59,93 @@ function App() {
                     </div>
                   </div>
                   <div class="my-auto">
+                    <div className="card-body justify-center">
+                      <h2 class="bg-pink-600 w-120 h-120 mx-auto font-bold text-xl p-2"> 4月27日(土) </h2>
+                      <p class="text-2xl text-center p-2">ピーアーク新城</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="card bg-indigo-700 card-side my-5 border-sky-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_3px_#08f]">
+                  <div class="my-auto">
+                    <div class="sm:flex justify-items-center">
+                      <img class="object-contain h-22 w-44 pl-3 py-1" src={sss_banner} alt="SSS"/>
+                      <img class="object-contain h-22 w-44 pl-3 py-1" src={ppp_banner} alt="PPP"/>
+                    </div>
+                  </div>
+                  <div class="my-auto">
+                    <div className="card-body justify-center">
+                      <h2 class="bg-pink-600 w-120 h-120 mx-auto font-bold text-xl p-2"> 4月27日(土) </h2>
+                      <p class="text-2xl text-center p-2">ピーアーク三田</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="card bg-indigo-700 card-side my-5 border-sky-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_3px_#08f]">
+                  <div class="my-auto">
+                    <div class="sm:flex justify-items-center">
+                      <img class="object-contain h-22 w-44 pl-3 py-1" src={sss_banner} alt="SSS"/>
+                      <img class="object-contain h-22 w-44 pl-3 py-1" src={ppp_banner} alt="PPP"/>
+                    </div>
+                  </div>
+                  <div class="my-auto">
                     <div className="card-body justify-center inline-block md:flex items-center">
-                      <h2 class="bg-pink-600 w-120 h-120 mx-auto font-bold text-xl p-2"> 4月28日(土) </h2>
+                      <h2 class="bg-pink-600 w-120 h-120 mx-auto font-bold text-xl p-2"> 4月28日(日) </h2>
                       <p class="text-2xl text-center  p-2">ピーアーク朝霞</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="card bg-indigo-700 card-side my-5 border-sky-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_3px_#08f]">
+                  <div class="my-auto">
+                    <div class="sm:flex justify-items-center">
+                      <img class="object-contain h-22 w-44 pl-3 py-1" src={sss_banner} alt="SSS"/>
+                      <img class="object-contain h-22 w-44 pl-3 py-1" src={ppp_banner} alt="PPP"/>
+                    </div>
+                  </div>
+                  <div class="my-auto">
+                    <div className="card-body justify-center inline-block md:flex items-center">
+                      <h2 class="bg-pink-600 w-120 h-120 mx-auto font-bold text-xl p-2"> 4月28日(日) </h2>
+                      <p class="text-2xl text-center  p-2">ピーアーク草加</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="card bg-indigo-700 card-side my-5 border-sky-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_3px_#08f]">
+                  <div class="my-auto">
+                    <div class="sm:flex justify-items-center">
+                      <img class="object-contain h-22 w-44 pl-3 py-1" src={sss_banner} alt="SSS"/>
+                      <img class="object-contain h-22 w-44 pl-3 py-1" src={ppp_banner} alt="PPP"/>
+                    </div>
+                  </div>
+                  <div class="my-auto">
+                    <div className="card-body justify-center inline-block md:flex items-center">
+                      <h2 class="bg-pink-600 w-120 h-120 mx-auto font-bold text-xl p-2"> 4月28日(日) </h2>
+                      <p class="text-2xl text-center  p-2">ピーアーク相模大野</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="card bg-indigo-700 card-side my-5 border-sky-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_3px_#08f]">
+                  <div class="my-auto">
+                    <div class="sm:flex justify-items-center">
+                      <img class="object-contain h-22 w-44 pl-3 py-1" src={sss_banner} alt="SSS"/>
+                      <img class="object-contain h-22 w-44 pl-3 py-1" src={ppp_banner} alt="PPP"/>
+                    </div>
+                  </div>
+                  <div class="my-auto">
+                    <div className="card-body justify-center inline-block md:flex items-center">
+                      <h2 class="bg-pink-600 w-120 h-120 mx-auto font-bold text-xl p-2"> 4月29日(月) </h2>
+                      <p class="text-2xl text-center  p-2">ピーアーク相模原</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="card bg-indigo-700 card-side my-5 border-sky-200 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_3px_#08f]">
+                  <div class="my-auto">
+                    <div class="sm:flex justify-items-center">
+                      <img class="object-contain h-22 w-44 pl-3 py-1" src={sss_banner} alt="SSS"/>
+                      <img class="object-contain h-22 w-44 pl-3 py-1" src={ppp_banner} alt="PPP"/>
+                    </div>
+                  </div>
+                  <div class="my-auto">
+                    <div className="card-body justify-center inline-block md:flex items-center">
+                      <h2 class="bg-pink-600 w-120 h-120 mx-auto font-bold text-xl p-2"> 5月5日(日) </h2>
+                      <p class="text-2xl text-center  p-2">ピーアーク千葉駅前</p>
                     </div>
                   </div>
                 </div>
