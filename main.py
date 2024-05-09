@@ -48,6 +48,7 @@ def schedule():
     #今日より後の日付のデータを抽出
     today = datetime.now().date()
     df = df[df['date'] >= today]
+    df.sort_values('date', inplace=True)
     extract_v_concat_df = pd.DataFrame(columns=df.columns, index=[])
     #日毎かつhall_nameの重複データを抽出
     for date in df['date'].unique():
