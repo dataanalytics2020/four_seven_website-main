@@ -26,7 +26,7 @@ origins = [
     "http://localhost:3000",
     "http://localhost:3001",
     "https://four-seven-website-main.vercel.app",
-    "https://www.7777-fourseven.com/"
+    "https://www.7777-fourseven.com"
 ]
 
 
