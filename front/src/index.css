@@ -49,3 +49,13 @@ code {
 .h-screen {
   height: 126vh;
 }
+
+.tab-content {
+  grid-column-start: 1;
+  grid-column-end: span 9999;
+  grid-row-start: 2;
+  margin-top: calc(var(--tab-border)* -1);
+  display: block;
+  border-color: transparent;
+  border-width: var(--tab-border, 0);
+}
