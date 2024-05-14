@@ -62,7 +62,18 @@ def schedule():
             extract_df.iat[0, 5] = include_syuzai_name_list
             extract_df = extract_df.drop_duplicates(subset='hall_name', keep='first')
             extract_v_concat_df = pd.concat([extract_v_concat_df, extract_df], axis=0)
+
+    #曜日列を追加する
+    week_list = ['月', '火', '水', '木', '金', '土', '日']
+    extract_v_concat_df['day_of_week'] = extract_v_concat_df['date'].map(lambda x: week_list[datetime.strptime(str(x), '%Y-%m-%d').weekday()])
+
+    #日本語での日付表記に変更
     extract_v_concat_df['date'] = extract_v_concat_df['date'].astype(str)
+    extract_v_concat_df['date'] = extract_v_concat_df['date'].map(lambda x: x.split('-')[1].replace('-', '').lstrip('0') + '月' + x.split('-')[2].lstrip('0') + '日')
+
+    #日付列に曜日を追加
+    extract_v_concat_df['date'] = extract_v_concat_df['date'] + '(' + extract_v_concat_df['day_of_week'] + ')'
+    extract_v_concat_df = extract_v_concat_df.drop('day_of_week', axis=1)
     extract_v_concat_df
     schedule_dict = extract_v_concat_df.to_dict(orient='records')
     return schedule_dict
