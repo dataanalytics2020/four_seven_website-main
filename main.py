@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.encoders import jsonable_encoder
 from dotenv import load_dotenv
 import os
 import pandas as pd
@@ -101,7 +102,6 @@ def top_report_data():
     report_df['hall_name_and_date'] =  report_df['hall_name'] + '_' + report_df['date'].astype(str)
     hall_name_and_date_list = list(report_df['hall_name_and_date'].unique())[0:10]
     report_df = report_df[report_df['hall_name_and_date'].isin(hall_name_and_date_list)]
-    report_df
 
     #日毎かつhall_nameの重複データを抽出
     master_json = []
@@ -118,9 +118,8 @@ def top_report_data():
             #display(extract_report_df[:3])
             extract_subject_num_df = extract_report_df[extract_report_df['subject_number'] == subject_number]
             extract_subject_num_df.sort_values('machine_number', inplace=True)
-            detail_report_json[f'subject_number'] = subject_number
+            detail_report_json[f'subject_number'] = str(subject_number)
             detail_report_json[f'subject_name'] = list(extract_subject_num_df['subject_name'].unique())[0]
-            detail_report_json[f'subject_number'] = subject_number
             detail_report_json[f'extract_subject_num_df'] = extract_subject_num_df.to_dict(orient='records')
             #display(extract_subject_num_df)
             detail_report_json_list.append(detail_report_json)
@@ -132,12 +131,13 @@ def top_report_data():
             win_count = len(extract_subject_num_df[extract_subject_num_df['diff_coins'] > 0])
             win_count_str = f'{win_count}'+ '/' + f'{len(extract_subject_num_df)}' +  '(' + str(round(win_count/len(extract_subject_num_df)*100,1)) + '%)'
             win_count_str
-            detail_report_json[f'sum_diff_coins'] = sum_diff_coins
-            detail_report_json[f'ave_diff_coins'] = ave_diff_coins
-            detail_report_json[f'ave_output_rate'] = ave_output_rate
-            detail_report_json[f'win_count_str'] = win_count_str
-            print(sum_diff_coins, ave_diff_coins, ave_output_rate, win_count_str)
+            detail_report_json[f'sum_diff_coins'] = str(sum_diff_coins)
+            detail_report_json[f'ave_diff_coins'] = str(ave_diff_coins)
+            detail_report_json[f'ave_output_rate'] = str(ave_output_rate)
+            detail_report_json[f'win_count_str'] = str(win_count_str)
             report_json['detail_report_json_list'] = detail_report_json_list
+        
         master_json.append(report_json)
+        #break
 
-    return master_json
+    return jsonable_encoder(master_json)
