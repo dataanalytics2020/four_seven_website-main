@@ -99,9 +99,17 @@ def top_report_data():
     report_df['machine_number'] = report_df['machine_number'].astype(int)
     report_df['game_count'] = report_df['game_count'].astype(int)
     report_df['diff_coins'] = report_df['diff_coins'].astype(int)
+    report_df['diff_coins']　 = report_df['diff_coins'] * -1
     report_df['hall_name_and_date'] =  report_df['hall_name'] + '_' + report_df['date'].astype(str)
     hall_name_and_date_list = list(report_df['hall_name_and_date'].unique())[0:10]
     report_df = report_df[report_df['hall_name_and_date'].isin(hall_name_and_date_list)]
+        #日本語での日付表記に変更
+    report_df['date'] = report_df['date'].astype(str)
+    report_df['date'] = report_df['date'].map(lambda x: x.split('-')[1].replace('-', '').lstrip('0') + '月' + x.split('-')[2].lstrip('0') + '日')
+
+    #日付列に曜日を追加
+    report_df['date'] = report_df['date'] + '(' + report_df['day_of_week'] + ')'
+    report_df = report_df.drop('day_of_week', axis=1)
 
     #日毎かつhall_nameの重複データを抽出
     master_json = []
