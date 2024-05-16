@@ -99,11 +99,15 @@ def top_report_data():
     report_df['machine_number'] = report_df['machine_number'].astype(int)
     report_df['game_count'] = report_df['game_count'].astype(int)
     report_df['diff_coins'] = report_df['diff_coins'].astype(int)
-    report_df['diff_coins']　 = report_df['diff_coins'] * -1
+    report_df['diff_coins'] = report_df['diff_coins'] * -1
     report_df['hall_name_and_date'] =  report_df['hall_name'] + '_' + report_df['date'].astype(str)
     hall_name_and_date_list = list(report_df['hall_name_and_date'].unique())[0:10]
     report_df = report_df[report_df['hall_name_and_date'].isin(hall_name_and_date_list)]
-        #日本語での日付表記に変更
+    
+    #曜日列を追加する
+    week_list = ['月', '火', '水', '木', '金', '土', '日']
+    report_df['day_of_week'] = report_df['date'].map(lambda x: week_list[datetime.strptime(str(x), '%Y-%m-%d').weekday()])
+    #日本語での日付表記に変更
     report_df['date'] = report_df['date'].astype(str)
     report_df['date'] = report_df['date'].map(lambda x: x.split('-')[1].replace('-', '').lstrip('0') + '月' + x.split('-')[2].lstrip('0') + '日')
 
@@ -117,9 +121,10 @@ def top_report_data():
         print(hall_name_and_date_str)
         report_json = {}
         report_json['hall_name'] = hall_name_and_date_str.split('_')[0]
-        report_json['date'] = hall_name_and_date_str.split('_')[1]
+        
         detail_report_json_list = []
         extract_report_df = report_df[(report_df['hall_name_and_date'] == hall_name_and_date_str)]
+        report_json['date'] = extract_report_df['date'].unique()[0]
         for subject_number in sorted(extract_report_df['subject_number'].unique()):
             detail_report_json = {}
             extract_report_df = extract_report_df[['machine_number', 'machine_name', 'game_count', 'diff_coins','subject_number','subject_name']]
