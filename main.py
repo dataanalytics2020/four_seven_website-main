@@ -132,7 +132,9 @@ def top_report_data():
             extract_subject_num_df = extract_report_df[extract_report_df['subject_number'] == subject_number]
             extract_subject_num_df.sort_values('machine_number', inplace=True)
             detail_report_json[f'subject_number'] = str(subject_number)
-            detail_report_json[f'subject_name'] = list(extract_subject_num_df['subject_name'].unique())[0]
+            subject_name_list = list(extract_subject_num_df['subject_name'].unique())
+            subject_name_list.remove('')
+            detail_report_json[f'subject_name'] = subject_name_list[0]
             detail_report_json[f'extract_subject_num_df'] = extract_subject_num_df.to_dict(orient='records')
             #display(extract_subject_num_df)
             detail_report_json_list.append(detail_report_json)
