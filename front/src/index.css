@@ -59,3 +59,20 @@ code {
   border-color: transparent;
   border-width: var(--tab-border, 0);
 }
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+.collapse-content {
+  visibility: hidden;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  min-height: 0px;
+  transition: visibility 0.2s;
+  transition: padding 0.2s ease-out, background-color 0.2s ease-out;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  cursor: unset;
+}

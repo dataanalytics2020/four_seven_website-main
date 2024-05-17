@@ -34,7 +34,7 @@ function App() {
       <div className="navbar-end">
       </div>
     </div>
-      <div className="h-screen" style={{background:`url(${bgImage}) 0 0  repeat-y`}} >
+      <div className="h-screen w-full" style={{background:`url(${bgImage}) 0 0  repeat`}} >
         <div className="container mx-auto p-2">
           <div class="max-w-2xl mx-auto">
             <img class="my-5 w-full" src={fourseven_500_250} />

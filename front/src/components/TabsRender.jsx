@@ -1,5 +1,6 @@
 import React from "react";
 import ScheduleDataRender from '../components/GetSchedule.jsx';
+import TopReportDataRender from '../components/GetTopRepoet.jsx';
 const Tabs = ({ color }) => {
   const [openTab, setOpenTab] = React.useState(1);
   return (
@@ -75,14 +76,11 @@ const Tabs = ({ color }) => {
                   <ScheduleDataRender  />
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  取材結果はありません
+                  <TopReportDataRender  />
                 </div>
                 <div className={openTab === 3 ? "block" : "hidden"} id="link3">
                   <ul className="menu bg-base-200 w-100 ">
-                    <li className="disabled"><a>ピーアーク竹ノ塚</a></li>
-                    <li className="disabled"><a>ピーアーク朝霞</a></li>
-                    <li className="disabled"><a>ピーアーク草加</a></li>
-                    <li className="disabled"><a>ピーアーク新城</a></li>
+                    <li className="disabled"><a></a></li>
                   </ul>
                 </div>
               </div>
